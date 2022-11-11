@@ -1,0 +1,29 @@
+<div class="container mx-0">
+    <div class="login-box">
+        <h2>Login</h2>
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
+            <div class="user-box pb-4 mb-3" >
+                <input type="text" name="" required="" formControlName="serverUrl" class="mb-0">
+                    <span *ngIf="isFormSubmitted && loginForm.controls.serverUrl.invalid" class="text-error"> *server url is requried </span>
+                <label>Server Url</label>
+            </div>
+            <div class="user-box pb-4 mb-3" >
+                <input type="text" name="" required="" formControlName="username" class="mb-0">
+                <div *ngIf="isFormSubmitted && loginForm.controls.username.invalid" class="text-error">
+                    <span> *username is requried </span>
+                </div>
+                <label>Username</label>
+            </div>
+            <div class="user-box pb-4 mb-3" >
+                <input type="password" name="" required="" formControlName="password" class="mb-0">
+                <div *ngIf="isFormSubmitted && loginForm.controls.password.invalid" class="text-error">
+                    <span> *password is requried </span>
+                </div>
+                <label>Password</label>
+            </div>
+            <button class="submitBtn" type="submit">
+                Submit
+            </button>
+        </form>
+    </div>
+</div>
