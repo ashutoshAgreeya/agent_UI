@@ -40,7 +40,6 @@ export class LoginComponent implements OnInit {
   login()
   {
     this.isFormSubmitted = true;
-    this.router.navigate(['/home']);
     if(this.loginForm.invalid)
     {
       return;
